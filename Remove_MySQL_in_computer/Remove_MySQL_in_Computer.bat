@@ -3,7 +3,7 @@
 	:start
 	echo.
 	echo ****************************
-	echo * Author: Jonathan Herrera 			  
+	echo * Author: Jonathan H.			  
 	echo * Licence: Free
 	echo * Known issues:
 	echo * Not tested in many PCs
@@ -12,7 +12,7 @@
 	echo * verbatim copies of this program, but you may not
 	echo * alter it or use it 'for commercial purposes'
 	echo * without the express written permission
-	echo * of Jonathan Herrera
+	echo * of Jonathan H.
 	echo *****************************
 	echo.
 	echo.
