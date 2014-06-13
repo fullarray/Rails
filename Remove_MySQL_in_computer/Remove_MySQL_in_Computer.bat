@@ -27,31 +27,37 @@
 	echo.
 	set /p choice=Enter your selection: 
 	echo.
-	if '%choice%'=='' echo "%choice%" is not valid please try again.
-	if '%choice%'=='1' goto remove
-	if '%choice%'=='2' goto end
-	if '%choice%'=='3' goto start
+	rem if not "%choice:1,2,3%"=="" goto error
+	if "%choice%"=="1" goto remove
+	if "%choice%"=="2" goto end
+	if "%choice%"=="3" goto start
 	echo.
 	:remove
 	echo.
 	echo Removing services
+	echo Hang in there. Stopping MySQL instance on host computer
 	net stop MySQL
 	echo ...
 	echo ..
 	echo .
 	sc config "MySQL" start= disabled
-	echo ....wait a little longer. Disabling MySQL instance on host computer
+	echo ....just wait a little longer. Disabling MySQL instance on host computer
 	echo ...
 	echo ..
 	echo .
 	sc delete MySQL
-	echo ....wait sometime. Removing MySQL service in host computer.
+	echo ....almost there. Removing MySQL service in host computer.
 	echo ...
 	echo ..
 	echo .
-	echo Go ahead start your MySQL instance on you USB drive.
+	echo Alright, go ahead, start using your MySQL instance on you USB drive.
 	echo.
 	goto end
+	:error
+	echo "%choice%" is not valid please try again.
+	set /p choice=Enter your selection: 
+	echo.
+	echo.
 	:end
 	echo Ending program.
 	echo.
