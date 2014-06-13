@@ -2,20 +2,18 @@
 	cls
 	:start
 	echo.
-	echo ******************************************
-	echo |	Author: Jonathan Herrera 			  |
-	echo |	Licence: Free					      |
-	echo |  Known issues: Not tested in many PCs  |
-	echo |  Disclaimer: Everyone is permitted to  |
-	echo |              copy and distribute 	  |
-	echo |				verbatim copies of this   |
-	echo | 				program, but you may not  |
-	echo |              alter it, use it in       |
-	echo | 				commercial products       |
-	echo | 				without the express       |
-	echo | 				written permission		  |
-	echo |				of Jonathan Herrera		  |
-	echo ******************************************
+	echo ****************************
+	echo * Author: Jonathan Herrera 			  
+	echo * Licence: Free
+	echo * Known issues:
+	echo * Not tested in many PCs
+	echo * Disclaimer:
+	echo * Everyone is permitted to copy and distribute
+	echo * verbatim copies of this program, but you may not
+	echo * alter it or use it 'for commercial purposes'
+	echo * without the express written permission
+	echo * of Jonathan Herrera
+	echo *****************************
 	echo.
 	echo.
 	echo ******************************************
@@ -24,10 +22,10 @@
 	echo.
 	echo Instructions
 	echo.
-	echo Press 1 to disable and remove MySQL from your computer NOT USB
+	echo Press 1, any key, or ENTER to stop, disable, and remove MySQL from your computer NOT USB
 	echo Press 2 if you don't like me and want to close.
 	echo.
-	set /p choice=Type any key or ENTER to disable and remove MySQL: 
+	set /p choice=Enter your selection: 
 	echo.
 	if '%choice%'=='' echo "%choice%" is not valid please try again.
 	if '%choice%'=='1' goto remove
@@ -55,7 +53,7 @@
 	echo.
 	goto end
 	:end
-	echo Ending batch.
+	echo Ending program.
 	echo.
 	pause
 EXIT
